@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/bi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="标题:"
+        android:textSize="35dp" />
+
+    <EditText
+        android:id="@+id/biaotiname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/bi"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/bi1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bi"
+        android:text="心情:"
+        android:textSize="35dp" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/biaotiname"
+        android:layout_below="@+id/biaotiname"
+        android:entries="@array/cities"
+        android:prompt="@string/spin_prompt" />
+
+     <EditText
+         android:id="@+id/cotentedit"
+         android:layout_width="match_parent"
+         android:layout_height="fill_parent"
+         android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinner1"
+         android:layout_above="@+id/commitbut"
+         android:ems="10"
+         android:gravity="top"
+         android:textSize="20dp" >
+          </EditText>
+
+     <Button
+         android:id="@+id/commitbut"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+         android:text="保存"
+         android:textSize="80dp" />
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  
+     >
+
+    <ImageView
+        android:id="@+id/myimg"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:background="@drawable/img" />
+
+    <TextView
+        android:id="@+id/tilte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/myimg"
+       android:textSize="23dp"
+        android:maxLength="6"
+        android:text="标题" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tilte"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/myimg"
+       android:maxLength="25"
+        android:text="内容内容内容内容" />
+
+    <TextView
+        android:id="@+id/mood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textSize="8dp"
+        android:text="心情" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+           android:layout_marginTop="145dp"
+        android:layout_alignParentRight="true"
+        android:text="时间" />
+    
+
+</RelativeLayout>
