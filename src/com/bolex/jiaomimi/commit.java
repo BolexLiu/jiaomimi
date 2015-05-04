@@ -69,6 +69,7 @@ public class commit extends Activity {
 		Intent intent=new Intent(getApplicationContext(),ImageLockActivity.class);
 		intent.putExtra("view", "commit");
 		startActivity(intent);
+		finish();
 		
 	}
 	  public boolean onKeyDown(int keyCode, KeyEvent event) {  

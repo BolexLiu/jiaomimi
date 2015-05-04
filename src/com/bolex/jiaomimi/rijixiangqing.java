@@ -37,6 +37,7 @@ public class rijixiangqing extends Activity {
 		super.onRestart();
 		Intent intent=new Intent(rijixiangqing.this,ImageLockActivity.class);
 		startActivity(intent);
+		finish();
 	}
 
 

@@ -119,6 +119,7 @@ public class MainActivity extends Activity {
 		super.onRestart();
 		Intent intent=new Intent(getApplicationContext(),ImageLockActivity.class);
 		startActivity(intent);
+		finish();
 	}
 	@Override
 	protected void onStart() { // 重新回到视图时刷新
