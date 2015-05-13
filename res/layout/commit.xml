@@ -34,25 +34,44 @@
         android:entries="@array/cities"
         android:prompt="@string/spin_prompt" />
 
-     <EditText
-         android:id="@+id/cotentedit"
-         android:layout_width="match_parent"
-         android:layout_height="fill_parent"
-         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/spinner1"
-         android:layout_above="@+id/commitbut"
-         android:ems="10"
-         android:gravity="top"
-         android:textSize="20dp" >
-          </EditText>
+    <ImageView
+        android:id="@+id/imgi"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/biaotiname"
 
-     <Button
-         android:id="@+id/commitbut"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_alignParentBottom="true"
-         android:layout_alignParentLeft="true"
-         android:text="保存"
-         android:textSize="80dp" />
+        android:layout_toLeftOf="@+id/commimgi"
+        android:background="@drawable/ic_launcher" />
+
+    <Button
+        android:id="@+id/commimgi"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/biaotiname"
+
+          android:layout_alignParentRight="true"
+        android:text="保存照片"
+      />
+
+    <EditText
+        android:id="@+id/cotentedit"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/commitbut"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinner1"
+        android:ems="10"
+        android:gravity="top"
+        android:textSize="20dp" >
+    </EditText>
+
+    <Button
+        android:id="@+id/commitbut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="保存"
+        android:textSize="80dp" />
 
 </RelativeLayout>
