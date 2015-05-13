@@ -113,14 +113,7 @@ public class MainActivity extends Activity {
 		Toast.makeText(this, "您是第" + spf.getInt("num", 0) + "打开本应用", 9000)
 				.show();
 	}
-	@Override
-	protected void onRestart() {
-		// TODO Auto-generated method stub
-		super.onRestart();
-		Intent intent=new Intent(getApplicationContext(),ImageLockActivity.class);
-		startActivity(intent);
-		finish();
-	}
+
 	@Override
 	protected void onStart() { // 重新回到视图时刷新
 	

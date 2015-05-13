@@ -30,15 +30,8 @@ public class rijixiangqing extends Activity {
 		moodview=(TextView) findViewById(R.id.moodview);
 		contentview=(TextView) findViewById(R.id.contentview);
 	};
-	@Override
 
-	protected void onRestart() {
-		// TODO Auto-generated method stub
-		super.onRestart();
-		Intent intent=new Intent(rijixiangqing.this,ImageLockActivity.class);
-		startActivity(intent);
-		finish();
-	}
+
 
 
 }

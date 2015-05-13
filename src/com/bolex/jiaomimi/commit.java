@@ -17,6 +17,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -104,15 +105,6 @@ public class commit extends Activity {
 
 	}
 
-	protected void onRestart() {
-		super.onRestart();
-		Intent intent = new Intent(getApplicationContext(),
-				ImageLockActivity.class);
-		intent.putExtra("view", "commit");
-		startActivity(intent);
-		finish();
-
-	}
 
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK

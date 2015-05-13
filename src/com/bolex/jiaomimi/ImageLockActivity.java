@@ -5,6 +5,7 @@ package com.bolex.jiaomimi;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
@@ -25,9 +26,13 @@ public class ImageLockActivity extends Activity {
     public void jinru(View v) {
     	
     	if (NPLV.getlock().equals("03678")) {
+    		
+    		
     		Intent intent=new Intent(ImageLockActivity.this,MainActivity.class);
+    		intent.putExtra("view", "lock");
 			startActivity(intent);
 			finish();
+    		
 		}else {
 			Toast.makeText(ImageLockActivity.this, "¥Ì¿≤¥Ì¿≤", 8000).show();
 		}
