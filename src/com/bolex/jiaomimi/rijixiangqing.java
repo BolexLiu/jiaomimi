@@ -7,14 +7,16 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 public class rijixiangqing extends Activity {
-	TextView titleview,timeview,moodview,contentview;
+	TextView titleview, timeview, moodview, contentview;
 	Bundle b;
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		  getWindow().setFlags(WindowManager.LayoutParams. FLAG_FULLSCREEN ,  
-	                WindowManager.LayoutParams. FLAG_FULLSCREEN);
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.rijixiangqing);
 		init();
 		titleview.setText(b.getString("title"));
@@ -22,16 +24,13 @@ public class rijixiangqing extends Activity {
 		moodview.setText(b.getString("mood"));
 		contentview.setText(b.getString("content"));
 	}
+
 	private void init() {
 		Intent in = getIntent();
-		b=in.getBundleExtra("Myconteitem");
-		titleview=(TextView) findViewById(R.id.titleview);
-		timeview=(TextView) findViewById(R.id.timeview);
-		moodview=(TextView) findViewById(R.id.moodview);
-		contentview=(TextView) findViewById(R.id.contentview);
-	};
-
-
-
-
+		b = in.getBundleExtra("Myconteitem");
+		titleview = (TextView) findViewById(R.id.titleview);
+		timeview = (TextView) findViewById(R.id.timeview);
+		moodview = (TextView) findViewById(R.id.moodview);
+		contentview = (TextView) findViewById(R.id.contentview);
+	};	
 }

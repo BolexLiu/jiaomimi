@@ -1,5 +1,6 @@
 package com.bolex.sqlhelper;
 
+import java.io.ByteArrayOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -10,6 +11,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.graphics.Bitmap;
 
 public class mysqlhelper extends SQLiteOpenHelper {
 
@@ -22,23 +24,19 @@ public class mysqlhelper extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		db.execSQL("create table if not exists stutb(_id integer primary key autoincrement,"
-				+ "title text ,content text ,Mood text,time text)");
+				+ "title text ,content text ,Mood text,time text,_img text)");
 	}
 	public Cursor select(SQLiteDatabase db) {
-		return	db.query("stutb", new String[]{"_id","title","content","Mood","time"}, null, null, null, null, null, null);
+		return	db.query("stutb", new String[]{"_id","title","content","Mood","time","_img"}, null, null, null, null, null, null);
 	}
 	public int inset(SQLiteDatabase db, String title, String content,
-			String Mood) {
+			String Mood,String bmp) {
 		ContentValues cv = new ContentValues();
 		cv.put("title", title);
 		cv.put("content", content);
 		cv.put("Mood", Mood);
 		cv.put("time", time());
-		/*
-		 * SQLdb.execSQL(
-		 * "insert into stutb(title,content,Mood,time)values('≤‚ ‘','ƒ⁄»›','∫√','" +
-		 * time() + "')");
-		 */
+		cv.put("_img", bmp); 
 		return (int) db.insert("stutb", null, cv);
 	}
 	public String time() {

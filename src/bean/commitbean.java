@@ -1,9 +1,25 @@
 package bean;
 
+import android.graphics.Bitmap;
+
 public class commitbean {
     private String titleB;
     private String contentB;
     private String moodB;
+    private String mbtmap;
+    
+	/**
+	 * @return the mbtmap
+	 */
+	public String getMbtmap() {
+		return mbtmap;
+	}
+	/**
+	 * @param mbtmap the mbtmap to set
+	 */
+	public void setMbtmap(String mbtmap) {
+		this.mbtmap = mbtmap;
+	}
 	/**
 	 * @return the titleB
 	 */
